@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#583a2c">
+    <meta name="description" content="Three thoughtful vegetarian dinner ideas, made from what's already in your kitchen.">
+    <title>Good Things in the Fridge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="wordmark" href="/" aria-label="Good Things in the Fridge home">
+          <span class="wordmark-icon" aria-hidden="true">✳</span>
+          <span>good things <i>in the fridge</i></span>
+        </a>
+        <span class="topbar-note"><span class="leaf-dot" aria-hidden="true"></span> Always vegetarian. Always egg-free.</span>
+      </header>
+
+      <main>
+        <section class="hero" aria-labelledby="page-title">
+          <div class="hero-copy">
+            <p class="eyebrow">A little dinner inspiration</p>
+            <h1 id="page-title">Your fridge called.<br><span>Dinner is looking good.</span></h1>
+            <p class="hero-description">Tell us what you have on hand. We’ll turn it into three lovely, meat-free ideas — with a little help from your pantry.</p>
+            <div class="hero-stamp" aria-label="Three ideas, made for you">
+              <span class="stamp-number">3</span>
+              <span>fresh<br>ideas</span>
+              <span class="stamp-sparkle" aria-hidden="true">✳</span>
+            </div>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="art-sun"></div>
+            <div class="art-plate">
+              <div class="plate-food food-tomato"></div>
+              <div class="plate-food food-leaf"></div>
+              <div class="plate-food food-pasta"></div>
+              <div class="plate-food food-bean"></div>
+              <div class="plate-food food-leaf leaf-two"></div>
+              <div class="plate-food food-tomato tomato-two"></div>
+            </div>
+            <div class="art-flower">✿</div>
+            <span class="art-caption">good food, no fuss</span>
+          </div>
+        </section>
+
+        <section class="workspace" aria-label="Recipe finder">
+          <form id="recipe-form" class="form-card">
+            <div class="section-heading">
+              <span class="step-number">01</span>
+              <div>
+                <p class="eyebrow">Start with what you have</p>
+                <h2>What’s in your kitchen?</h2>
+              </div>
+            </div>
+
+            <label class="field-label" for="ingredients">Your ingredients <span>separate with commas</span></label>
+            <textarea id="ingredients" name="ingredients" rows="3" placeholder="Chickpeas, spinach, cherry tomatoes..." required></textarea>
+            <p class="field-hint">A few ingredients are plenty. We’ll fill in the rest.</p>
+
+            <div class="section-heading constraints-heading">
+              <span class="step-number">02</span>
+              <div>
+                <p class="eyebrow">Make it yours</p>
+                <h2>Any little preferences?</h2>
+              </div>
+              <span class="optional-tag">all optional</span>
+            </div>
+
+            <div class="constraint-grid">
+              <label class="field-group" for="dietary">
+                <span class="field-label">Dietary notes</span>
+                <input id="dietary" name="dietary" type="text" placeholder="e.g. dairy-free, gluten-free">
+              </label>
+              <label class="field-group" for="cuisine">
+                <span class="field-label">Craving a cuisine?</span>
+                <input id="cuisine" name="cuisine" type="text" placeholder="e.g. Italian, Thai">
+              </label>
+              <label class="field-group" for="max-cook-time">
+                <span class="field-label">Time you have <span>minutes</span></span>
+                <input id="max-cook-time" name="maxCookTime" type="number" min="1" max="600" placeholder="Any amount">
+              </label>
+              <label class="field-group" for="servings">
+                <span class="field-label">Cooking for</span>
+                <input id="servings" name="servings" type="number" min="1" max="20" placeholder="Any number">
+              </label>
+            </div>
+
+            <div class="promise-note">
+              <span class="promise-icon" aria-hidden="true">♥</span>
+              <span>Every idea is vegetarian and made without eggs, fish or meat.</span>
+            </div>
+            <button class="submit-button" type="submit">
+              <span class="button-label">Find my dinner ideas</span>
+              <span class="button-arrow" aria-hidden="true">↗</span>
+            </button>
+            <p id="form-error" class="error-message" role="alert" hidden></p>
+          </form>
+
+          <aside class="side-note">
+            <div class="note-scribble" aria-hidden="true">↙</div>
+            <p class="eyebrow">A good thing to know</p>
+            <h2>Use what you love.<br>Skip what you don’t.</h2>
+            <p>We’ll label what’s already in your fridge and what you might want to pick up. No waste, no pressure.</p>
+            <div class="side-note-divider"></div>
+            <p class="handwritten">the best meals start somewhere <span aria-hidden="true">✿</span></p>
+          </aside>
+        </section>
+
+        <section id="results" class="results-section" aria-live="polite" hidden>
+          <div class="results-heading">
+            <div>
+              <p class="eyebrow">A few good possibilities</p>
+              <h2>Let’s make something lovely.</h2>
+            </div>
+            <span class="results-count">3 ideas for tonight</span>
+          </div>
+          <div id="recipe-list" class="recipe-grid"></div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>Made for the ingredients already waiting at home.</span>
+        <span>Good things, one meal at a time <span class="footer-heart" aria-hidden="true">♥</span></span>
+      </footer>
+    </div>
+  </body>
+</html>
