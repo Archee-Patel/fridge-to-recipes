@@ -7,8 +7,7 @@ A small recipe finder for turning the ingredients you already have into three di
 Requirements: Node.js 18 or newer and a Groq API key.
 
 ```sh
-cd recipe-app
-cp .env
+cp .env.example .env
 ```
 
 Add your key to `.env`:
@@ -17,7 +16,7 @@ Add your key to `.env`:
 GROQ_API_KEY=your_groq_api_key_here
 ```
 
-The key is read by the local server or CLI only and is never sent to the browser. Both commands load `recipe-app/.env` automatically at startup; if you change `.env` while the server is running, restart it. `.env` is ignored by Git. You can optionally set `GROQ_MODEL` (defaults to `openai/gpt-oss-120b`) and `PORT` (defaults to `3000`). No package installation is needed; the app uses Node.js built-ins.
+The key is read by the local server or CLI only and is never sent to the browser. Both commands load `.env` from the repository root automatically at startup; if you change `.env` while the server is running, restart it. `.env` is ignored by Git. You can optionally set `GROQ_MODEL` (defaults to `openai/gpt-oss-120b`) and `PORT` (defaults to `3000`). No package installation is needed; the app uses Node.js built-ins.
 
 Link to Groq - https://console.groq.com/home
 
