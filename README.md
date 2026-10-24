@@ -19,6 +19,8 @@ GROQ_API_KEY=your_groq_api_key_here
 
 The key is read by the local server or CLI only and is never sent to the browser. Both commands load `recipe-app/.env` automatically at startup; if you change `.env` while the server is running, restart it. `.env` is ignored by Git. You can optionally set `GROQ_MODEL` (defaults to `openai/gpt-oss-120b`) and `PORT` (defaults to `3000`). No package installation is needed; the app uses Node.js built-ins.
 
+Link to Groq - https://console.groq.com/home
+
 | Environment variable | Required | Description |
 | --- | --- | --- |
 | `GROQ_API_KEY` | Yes | Your Groq API key. The temporary key used for this setup is valid for 7 days; create a replacement when it expires, update `.env`, and restart the app. |
